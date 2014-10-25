@@ -15,7 +15,7 @@
 		<link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-	<div id="page-home" class="page" style="display: block; background: url(logo.png) 0px 140px no-repeat; background-size: contain;">
+	<div id="page-home" class="page" style="display: none; background: url(logo.png) 0px 140px no-repeat; background-size: contain;">
 		<div id="btn-payment-history" class="" style="text-align: center; padding-top:12px;">View Payment History</div>
 	</div>
 
@@ -67,7 +67,11 @@
 
 
 
-	<div id="page-password" class="page" style="position: relative; height: 320px; width: 100%;">
+	<div id="page-password" class="page" style="position: relative; height: 320px; width: 100%; display: block">
+		<div style="position: absolute; height: 40px; width: 40px; left: 140px; top: 10px; background: url(arrow_outline_up.png) no-repeat center center; background-size: contain;"></div>
+		<div style="position: absolute; height: 40px; width: 40px; left: 140px; bottom: 10px; background: url(arrow_outline_down.png) no-repeat center center; background-size: contain;"></div>
+		<div style="position: absolute; height: 40px; width: 40px; left: 10px; top: 140px; background: url(arrow_outline_left.png) no-repeat center center; background-size: contain;"></div>
+		<div style="position: absolute; height: 40px; width: 40px; right: 10px; top: 140px; background: url(arrow_outline_right.png) no-repeat center center; background-size: contain;"></div>
 		<div id="pin-box">
 			<div style="padding-top: 30px; font-size: 18px;">Swipe to Enter Pin</div>
 			<div id="pin-entry-1" class="pin-entry">

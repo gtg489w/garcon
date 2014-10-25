@@ -123,8 +123,23 @@ var postPayment = function() {
 			$('#page-payment-success').fadeIn();
 			setTimeout(function() {
 				$('.page').hide();
+				// reset
 				$('#page-home').fadeIn();
 				acceptingPayment = false;
+				$('#payment-page-container').css({ 'top': '0px' });
+				$('#payment-page-container').show();
+				$('#no-tip').show();
+				$('#payment-card-line').hide();
+				$('#payment-processing-line').hide();
+				$('#page-payment-success').hide();
+				$('#payment-processing-page').hide();
+				$('#payment-total').show();
+				$('#payment-tip btn').removeClass('btn-selected');
+				pinIndex = 1;
+				$('.pin-entry div').hide();
+				$('#btn-tip-10').removeClass('btn-selected');
+				$('#btn-tip-15').removeClass('btn-selected');
+				$('#btn-tip-20').removeClass('btn-selected');
 			}, 3000);
 		});
 		var amt = $('#payment-total-dollar').text() + $('#payment-total-cents').text();
@@ -156,11 +171,22 @@ var showHistory = function(trans) {
 	});
 	$('#payment-history-list').append(html);
 	$('#payment-history-loading').hide();
+	$('.btn-dispute').click(function() {
+		contactSupport();
+	});
 	$('#payment-history-list').fadeIn();
 
 };
 
-
+var contactSupport = function() {
+	try {
+		SASocket.setDataReceiveListener(function(channelId, data) {
+			// do nada
+		});
+		SASocket.sendData(CHANNELID, "support");
+	} catch(err) {
+	}
+};
 
 
 
@@ -339,6 +365,7 @@ var slideToCardSelection = function() {
 		}
 		html += '<div id="card1" style="background-image: url('+cardType+'.png);" class="payment-card" rel="'+card.id+'"><div class="card-title">'+card.description+'</div></div>';
 	});
+	$('#payment-cards').html('');
 	$('#payment-cards').append(html);
 	$('.payment-card').click(function() {
 		$('#payment-card-line').fadeOut();

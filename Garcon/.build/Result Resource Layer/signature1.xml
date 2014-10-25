@@ -36,7 +36,7 @@
 </Reference>
 <Reference URI="author-signature.xml">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>hxGqDT5MeSpTbtLxGPMBXJyBe0flhNlYHNZDcRPilZA=</DigestValue>
+<DigestValue>dru++5h+mPBTKUEHi3TeVeFVCd2KXN1+jxtahMwCGh0=</DigestValue>
 </Reference>
 <Reference URI="card_mastercard.png">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -64,7 +64,7 @@
 </Reference>
 <Reference URI="index.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>+3sbuNfNtcWFc5ydsxeAdQ6VAo1P2yhrJLeB9W72oMw=</DigestValue>
+<DigestValue>aLqjCzKQt/j19esHU2TlGwNOID9Tj44dY32/KTPPc1I=</DigestValue>
 </Reference>
 <Reference URI="js/jcarousel.js">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -172,7 +172,7 @@
 </Reference>
 <Reference URI="js/main.js">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>wxwqvKRL505PyLb+bMD/fHEvG/kwTsSHIGgMFnEHmmI=</DigestValue>
+<DigestValue>iK20LXHe4mcoTotWsPogpYKouu5/YJjJhH9AxUwEBHg=</DigestValue>
 </Reference>
 <Reference URI="js/query.ui.touch-punch.min.js">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -211,11 +211,11 @@
 </Reference>
 </SignedInfo>
 <SignatureValue>
-Lm2wuidTV9xKjPkcFqkpYOGuZ6t9KLio+A2pmod9L9xAT6xiaLL8mBihWf/vQxMkygyIckafzreA
-tpFpTgY2ib+/1AVEnPvFJay4UmxXNmeR1pq6RD+MQ0P/o5dc4fafVR3IkSImWZ/w2X+qySw9VnT1
-J5TprDT/wQRfVViW3sYbMH1kx3qPPMfzdy1GfbcG5h8ym7pmj14jQ415wlQvw+C4nfeSj8Yk78GI
-pbAJZ5a2LGEjlBN/KEmb65+KAogRbJAvBxH6tmlJmObqqW0ol3mm/o9/Yx/XqHqogRgMTXXV3Jtw
-e0w9tTJCBr8wm+co+El1tBOjHXuRGX15R5JuZA==
+Os5gMtHfFAGCyjI7z6zjk9xIZamF6lIh1+ko/1sp+NZc5TAeTnzRqDEc4zMyD5Icpd+kXSXO/y7n
+0q3B1Ax6JufOFzjzIumv0rW7KETZ//SK8GgpsBNZLUcluFo2bWSSTpfjBP+D/Nty2bWzxpWe5dPz
+bWwDGkRU7tTeSYB9AW0uy8Az2LeYXu/49BaH25FQj7rez/4msv2Emg6FksrZHyjy9ZL8MN8992TB
+FdCl5cjwfE1uhTVnD5BMuZR1Xrxzhb8xoO2fYv4AjuUQrrKL8jDlhFz8R0SSM53stngCekVZ/QqG
+FbwwrsYfWVL02apcLkVKjpOyYePWBDjvh7i1FA==
 </SignatureValue>
 <KeyInfo>
 <X509Data>

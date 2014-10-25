@@ -33,17 +33,25 @@ var app = {
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicity call 'app.receivedEvent(...);'
     onDeviceReady: function() {
-        app.receivedEvent('deviceready');
-    },
-    // Update DOM on a Received Event
-    receivedEvent: function(id) {
-        var parentElement = document.getElementById(id);
-        var listeningElement = parentElement.querySelector('.listening');
-        var receivedElement = parentElement.querySelector('.received');
+        var xmlhttp=new XMLHttpRequest();
+          xmlhttp.open("GET", "https://opentokrtc.com/cordova.json", false);
+          xmlhttp.send();
+          var data = JSON.parse( xmlhttp.response );
 
-        listeningElement.setAttribute('style', 'display:none;');
-        receivedElement.setAttribute('style', 'display:block;');
+          // Very simple OpenTok Code for group video chat
+          var publisher = TB.initPublisher(/*data.apiKey*/ '45045452','myPublisherDiv');
 
-        console.log('Received Event: ' + id);
+          var session = TB.initSession( /*data.apiKey*/ '45045452', /*data.sid*/ '2_MX40NTA0NTQ1Mn5-MTQxNDIzOTM5NTgyNn5YTWZRU1dJQUNHanBRUkJpejhVU3U4S3R-fg' ); 
+          session.on({
+            'streamCreated': function( event ){
+                var div = document.createElement('div');
+                div.setAttribute('id', 'stream' + event.stream.streamId);
+                document.body.appendChild(div);
+                session.subscribe( event.stream, div.id, {subscribeToAudio: false} );
+            }
+          });
+          session.connect(data.token, function(){
+            session.publish( publisher );
+          });
     }
 };
