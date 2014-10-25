@@ -14,7 +14,7 @@ function onerror(err) {
 var agentCallback = {
 	onconnect : function(socket) {
 		SASocket = socket;
-		alert("HelloAccessory Connection established with RemotePeer");
+		//alert("HelloAccessory Connection established with RemotePeer");
 		createHTML("startConnection");
 		SASocket.setSocketStatusListener(function(reason){
 			console.log("Service connection lost, Reason : [" + reason + "]");
@@ -116,20 +116,49 @@ var getOrders = function() {
 	}
 };
 
-var postPayment = function(cardid) {
+var postPayment = function() {
 	try {
 		SASocket.setDataReceiveListener(function(channelId, data) {
-			alert('done');
+			$('.page').hide();
+			$('#page-payment-success').fadeIn();
+			setTimeout(function() {
+				$('.page').hide();
+				$('#page-home').fadeIn();
+				acceptingPayment = false;
+			}, 3000);
 		});
 		var amt = $('#payment-total-dollar').text() + $('#payment-total-cents').text();
 		amt = amt.replace('$','');
-		SASocket.sendData(CHANNELID, 'postPayment'+JSON.stringify({"orderId":1,"userId":1,"userCardId":cardid,"amount":amt,"tipAmount":0.0}));
+		SASocket.sendData(CHANNELID, 'postPayment'+JSON.stringify({"orderId":1,"userId":1,"userCardId":paymentCardId,"amount":amt,"tipAmount":0.0}));
 	} catch(err) {
 		alert("exception [" + err.name + "] msg[" + err.message + "]");
 	}
 };
 
+var getPaymentHistory = function() {
+	$('#payment-history-list').html('');
+	$('#payment-history-list').hide();
+	$('#payment-history-loading').show();
+	try {
+		SASocket.setDataReceiveListener(function(channelId, data) {
+			showHistory(JSON.parse(data));
+		});
+		SASocket.sendData(CHANNELID, "getHistory");
+	} catch(err) {
+	}
+};
 
+var showHistory = function(trans) {
+	var html = "";
+	trans.OrderHistory.forEach(function(tran) {
+		var date = tran.closeDateTime.split('T')[0].split('-');
+		html += '<tr><td>'+date[1]+'/'+date[2]+'/'+date[0]+'</td><td>$'+tran.totalAmount+'</td><td><div class="btn btn-dispute" style="font-size: 16px;">Dispute</div></td></tr>';
+	});
+	$('#payment-history-list').append(html);
+	$('#payment-history-loading').hide();
+	$('#payment-history-list').fadeIn();
+
+};
 
 
 
@@ -145,7 +174,10 @@ var order;
 var pinStart = {};
 var userId = 1;
 var getCards = "http://slabs.cc/garcon/api/usercard?$filter=userId%20eq%20"+userId;
+var getHistory = "http://slabs.cc/garcon/api/user/history/1";
 var acceptingPayment = false;
+var paymentCardId;
+var pinIndex = 1;
 
 $(window).load(function(){
 	setInterval(function() {
@@ -159,6 +191,12 @@ $(window).load(function(){
 	$('#btn-payment-history').click(function() {
 		$('.page').hide();
 		$('#page-payment-history').fadeIn();
+		getPaymentHistory();
+		//http://slabs.cc/garcon/api/user/history/1
+	});
+	$('#payment-history-back').click(function() {
+		$('.page').hide();
+		$('#page-home').fadeIn();
 	});
 	
 	
@@ -191,6 +229,33 @@ $(window).load(function(){
 	});
 	$('#pin-box').on("touchend", function(e){
 		e.preventDefault();
+		var touch = e.originalEvent.touches[0] || e.originalEvent.changedTouches[0];
+		var x = touch.pageX - pinStart.x;
+		var y = touch.pageY - pinStart.y;
+		if(Math.abs(x) > 40 || Math.abs(y) > 40) {
+			var dir = "up";
+			if(Math.abs(x) > Math.abs(y)) {
+				if(x > 0) {
+					dir = 'right';
+				} else {
+					dir = 'left';
+				}
+			} else {
+				if(y > 0) {
+					dir = 'down';
+				} else {
+					dir = 'up';
+				}
+			}
+			$('#pin-entry-'+pinIndex+' .arrow_'+dir).fadeIn();
+			pinIndex++;
+			if(pinIndex > 6) {
+				$('.page').hide();
+				$('#payment-processing-page').fadeIn();
+				postPayment();
+			}
+		}
+		//pinIndex
 		resetPinBox();
 		pinStart = {};
 	});
@@ -279,7 +344,11 @@ var slideToCardSelection = function() {
 		$('#payment-card-line').fadeOut();
 		$('#payment-total').fadeOut();
 		$('#payment-processing-line').fadeIn();
-		postPayment($(this).attr('rel'));
+		paymentCardId = $(this).attr('rel');
+		//postPayment();
+		$('.page').hide();
+		resetPinBox();
+		$('#page-password').fadeIn();
 	});
 	$('#payment-page-container').animate({
 		top: '-122px'

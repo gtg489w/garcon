@@ -16,11 +16,21 @@
 </head>
 <body>
 	<div id="page-home" class="page" style="display: block; background: url(logo.png) 0px 140px no-repeat; background-size: contain;">
-		<div id="btn-payment-history" class="center" style="padding-top:12px;">View Payment History</div>
+		<div id="btn-payment-history" class="" style="text-align: center; padding-top:12px;">View Payment History</div>
 	</div>
 
 	<div id="page-payment-history" class="page">
-		Payment History
+		<div style="float: left;" >Back</div>
+		<div class="center" id="payment-history-back" style="position: relative; left: -30px;">Payment History</div>
+		<table style="width: 100%; font-size: 18px;" id="payment-history-list" cellspacing="0" cellpadding="0">
+			
+		</table>
+		<div style="font-size: 16px; text-align: center; margin: 90px auto;" id="payment-history-loading">Loading...</div>
+	</div>
+
+	<div id="page-payment-success" class="page center">
+		<div style="background: url(check.png) no-repeat; background-size: contain; height: 90px; width: 90px; margin: auto; margin-top: 40px;"></div>
+		Your transaction has posted!
 	</div>
 
 	<div id="page-payment" class="page">
@@ -48,7 +58,7 @@
 				<div id="payment-cards" style="width: 800px; padding-left: 20px; padding-right: 20px; height: 200px;"></div>
 			</div>
 			<div id="payment-processing-line">
-				<div><img src="loading.gif" alt="" />
+				<div><img src="loading.gif" alt="" /></div>
 				<div>Processing<br />Payment</div>
 			</div>
 		</div>
@@ -57,9 +67,52 @@
 
 
 
+	<div id="page-password" class="page" style="position: relative; height: 320px; width: 100%;">
+		<div id="pin-box">
+			<div style="padding-top: 30px; font-size: 18px;">Swipe to Enter Pin</div>
+			<div id="pin-entry-1" class="pin-entry">
+				<div class="arrow_up" style="width: 100%; height: 100%; background: url(arrow_up.png) no-repeat center center; background-size: contain; display: none;"></div>
+				<div class="arrow_right" style="width: 100%; height: 100%; background: url(arrow_right.png) no-repeat center center; background-size: contain; display: none;"></div>
+				<div class="arrow_down" style="width: 100%; height: 100%; background: url(arrow_down.png) no-repeat center center; background-size: contain; display: none;"></div>
+				<div class="arrow_left" style="width: 100%; height: 100%; background: url(arrow_left.png) no-repeat center center; background-size: contain; display: none;"></div>
+			</div>
+			<div id="pin-entry-2" class="pin-entry">
+				<div class="arrow_up" style="width: 100%; height: 100%; background: url(arrow_up.png) no-repeat center center; background-size: contain; display: none;"></div>
+				<div class="arrow_right" style="width: 100%; height: 100%; background: url(arrow_right.png) no-repeat center center; background-size: contain; display: none;"></div>
+				<div class="arrow_down" style="width: 100%; height: 100%; background: url(arrow_down.png) no-repeat center center; background-size: contain; display: none;"></div>
+				<div class="arrow_left" style="width: 100%; height: 100%; background: url(arrow_left.png) no-repeat center center; background-size: contain; display: none;"></div>
+			</div>
+			<div id="pin-entry-3" class="pin-entry">
+				<div class="arrow_up" style="width: 100%; height: 100%; background: url(arrow_up.png) no-repeat center center; background-size: contain; display: none;"></div>
+				<div class="arrow_right" style="width: 100%; height: 100%; background: url(arrow_right.png) no-repeat center center; background-size: contain; display: none;"></div>
+				<div class="arrow_down" style="width: 100%; height: 100%; background: url(arrow_down.png) no-repeat center center; background-size: contain; display: none;"></div>
+				<div class="arrow_left" style="width: 100%; height: 100%; background: url(arrow_left.png) no-repeat center center; background-size: contain; display: none;"></div>
+			</div>
 
-	<div id="page-password" class="page">
-		<div id="pin-box"></div>
+			<div id="pin-entry-4" class="pin-entry">
+				<div class="arrow_up" style="width: 100%; height: 100%; background: url(arrow_up.png) no-repeat center center; background-size: contain; display: none;"></div>
+				<div class="arrow_right" style="width: 100%; height: 100%; background: url(arrow_right.png) no-repeat center center; background-size: contain; display: none;"></div>
+				<div class="arrow_down" style="width: 100%; height: 100%; background: url(arrow_down.png) no-repeat center center; background-size: contain; display: none;"></div>
+				<div class="arrow_left" style="width: 100%; height: 100%; background: url(arrow_left.png) no-repeat center center; background-size: contain; display: none;"></div>
+			</div>
+			<div id="pin-entry-5" class="pin-entry">
+				<div class="arrow_up" style="width: 100%; height: 100%; background: url(arrow_up.png) no-repeat center center; background-size: contain; display: none;"></div>
+				<div class="arrow_right" style="width: 100%; height: 100%; background: url(arrow_right.png) no-repeat center center; background-size: contain; display: none;"></div>
+				<div class="arrow_down" style="width: 100%; height: 100%; background: url(arrow_down.png) no-repeat center center; background-size: contain; display: none;"></div>
+				<div class="arrow_left" style="width: 100%; height: 100%; background: url(arrow_left.png) no-repeat center center; background-size: contain; display: none;"></div>
+			</div>
+			<div id="pin-entry-6" class="pin-entry">
+				<div class="arrow_up" style="width: 100%; height: 100%; background: url(arrow_up.png) no-repeat center center; background-size: contain; display: none;"></div>
+				<div class="arrow_right" style="width: 100%; height: 100%; background: url(arrow_right.png) no-repeat center center; background-size: contain; display: none;"></div>
+				<div class="arrow_down" style="width: 100%; height: 100%; background: url(arrow_down.png) no-repeat center center; background-size: contain; display: none;"></div>
+				<div class="arrow_left" style="width: 100%; height: 100%; background: url(arrow_left.png) no-repeat center center; background-size: contain; display: none;"></div>
+			</div>
+		</div>
+	</div>
+
+	<div id="payment-processing-page" class="page center">
+		<div style="padding-top: 90px;"><img src="loading.gif" alt="" /></div>
+		<div>Processing<br />Payment</div>
 	</div>
 
 </body>

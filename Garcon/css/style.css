@@ -64,8 +64,21 @@ body {
 #pin-box {
 	width: 200px;
 	height: 200px;
-	background: #abcdef;
+	background: #fff;
+	border-radius: 20px;
 	position: absolute;
+	color: #990000;
+	text-align: center;
+}
+.pin-entry {
+	width: 38px;
+	height: 50px;
+	border-bottom: 2px solid #990000;
+	margin: 8px 14px;
+	float: left;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: contain;
 }
 .btn-full {
 	width: 300px!important;
@@ -94,8 +107,13 @@ body {
 	font-size: 18px;
 	padding-top: 180px;
 }
-
-
+#payment-history-list {
+	margin-top: 40px;
+}
+#payment-history-list td {
+	border-top: 1px solid #fff;
+	padding: 20px 2px;
+}
 
 
 
