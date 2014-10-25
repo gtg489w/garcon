@@ -1,0 +1,76 @@
+* {
+    font-family: Verdana, Lucida Sans, Arial, Helvetica, sans-serif;
+}
+body {
+    margin: 0px auto;
+    background-color:#990000;
+    /*background: url(../payscreen.png) no-repeat center center;*/
+    background-size: cover;
+    font-size: 22px;
+}
+.page {
+	/*display: flex;
+	display: -webkit-flex;*/
+	display: none;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	height:320px;
+	color: #fff;
+}
+.btn {
+	border: 2px solid #fff;
+	-webkit-border-radius: 6px; 
+	-moz-border-radius: 6px; 
+	border-radius: 6px;
+	padding: 4px;
+	text-align: center;
+	color: #fff;
+	font-size: 32px;
+}
+.btn-selected {
+	background-color: #fff;
+	color: #990000;
+}
+.sub {
+	font-size: 50%;
+}
+.sup {
+	font-size: 22px;
+	vertical-align: top;
+	position: relative;
+	top: 12px;
+}
+.font22 {
+	font-size: 22px;
+}
+.center {
+	text-align: center;
+}
+
+
+
+
+
+#payment-total {
+	font-size: 84px;
+	text-align: center;
+}
+#payment-tip .btn {
+	width: 86px;
+	margin: 4px;
+	float: left;
+}
+#pin-box {
+	width: 200px;
+	height: 200px;
+	background: #abcdef;
+	position: absolute;
+}
+.btn-full {
+	width: 300px!important;
+}
+.card {
+	width: 200px;
+	height: 120px;
+	background: #fff;
+}
