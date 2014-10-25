@@ -102,9 +102,17 @@ function fetch() {
 
 
 var getOrders = function() {
-	// http://slabs.cc/garcon/api/order/bybeacon?beaconid=Beacon002
 	try {
 		alert('fetching orders');
+		SASocket.setDataReceiveListener(function(channelId, data) {
+			alert(data);
+			var j = JSON.parse(data);
+			if(j.id) {
+				order = j;
+				acceptingPayment = true;
+				showPayment();
+			}
+		});
 		SASocket.sendData(CHANNELID, "getOrders");
 	} catch(err) {
 		alert("exception [" + err.name + "] msg[" + err.message + "]");
@@ -123,17 +131,19 @@ var getOrders = function() {
 
 
 
-	
+var order;	
 var pinStart = {};
 var userId = 1;
 var getCards = "http://slabs.cc/garcon/api/usercard?$filter=userId%20eq%20"+userId;
+var acceptingPayment = false;
 
 $(window).load(function(){
-	//document.addEventListener('tizenhwkey', function(e) {
-    //    if(e.keyName == "back")
-    //        tizen.application.getCurrentApplication().exit();
-    //});
-
+	setInterval(function() {
+		if(acceptingPayment) {
+			return;
+		}
+		getOrders();
+	}, 5000);
 	
 	var resetPinBox = function() {
 		$('#pin-box').animate({
@@ -175,14 +185,6 @@ $(window).load(function(){
 		resetPinBox();
 		pinStart = {};
 	});
-
-
-
-	setTimeout(function() {
-		getOrders();
-	}, 4000);
-
-
 
 
 	// Page: PAYMENT
