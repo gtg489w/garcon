@@ -116,12 +116,14 @@ var getOrders = function() {
 	}
 };
 
-var postPayment = function() {
+var postPayment = function(cardid) {
 	try {
 		SASocket.setDataReceiveListener(function(channelId, data) {
 			alert('done');
 		});
-		SASocket.sendData(CHANNELID, 'postPayment{orderId":1,"userId":1,"userCardId":1,"amount":5.0,"tipAmount":6.0}');
+		var amt = $('#payment-total-dollar').text() + $('#payment-total-cents').text();
+		amt = amt.replace('$','');
+		SASocket.sendData(CHANNELID, 'postPayment'+JSON.stringify({"orderId":1,"userId":1,"userCardId":cardid,"amount":amt,"tipAmount":0.0}));
 	} catch(err) {
 		alert("exception [" + err.name + "] msg[" + err.message + "]");
 	}
@@ -277,8 +279,7 @@ var slideToCardSelection = function() {
 		$('#payment-card-line').fadeOut();
 		$('#payment-total').fadeOut();
 		$('#payment-processing-line').fadeIn();
-		alert('pay with '+$(this).attr('rel'));
-		postPayment();
+		postPayment($(this).attr('rel'));
 	});
 	$('#payment-page-container').animate({
 		top: '-122px'

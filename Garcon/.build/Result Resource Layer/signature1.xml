@@ -4,7 +4,7 @@
 <SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"></SignatureMethod>
 <Reference URI="author-signature.xml">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>o14ng/Ejn1H5eRTfz0MojFH19QQm7nKB0bMblPn0huU=</DigestValue>
+<DigestValue>SX3xSfGQmi3GpFPhkhPZwbk+lqWpnZ9HDC4d+qm8Ht8=</DigestValue>
 </Reference>
 <Reference URI="card_mastercard.png">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -136,7 +136,7 @@
 </Reference>
 <Reference URI="js/main.js">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>7EMJQcEZX/W/l/iCE1SD05KFdbFhiIHpm464qJsv1z8=</DigestValue>
+<DigestValue>new2JP0iozeGy6c8Sw3sOKoG00+J0002p3aJl4a/gx4=</DigestValue>
 </Reference>
 <Reference URI="js/query.ui.touch-punch.min.js">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -175,11 +175,11 @@
 </Reference>
 </SignedInfo>
 <SignatureValue>
-b+GKFAL0L990SZudD9pAGFIvEmf6TJ7JzFYm0PDGQwomwjrytqUCFZjyxkv2EXmv2EUzuqxKf+XG
-fSzfOct34x3XoQSqs56kvZ67ebT3RdIqCdMgJy1QFlb4I15n9IxcWWxpsQcSM6PWDHoxSZEVPy/m
-XXUIj1bU3lWjiYcodtfALBLObZVnWfakt0wp7K5dBQt3Mj8BqSYjvImVPmEJlL2H5aCUboRbU8lm
-LvQ8t9DVUi2AEyEPbhCXtlCuCQUDBxxTN2eGfcRlpigL5+toQHGcJ2U2RhXHAAf/d2/UedBQEFy5
-W2Hu+8YA733lZdxvJJ7GkPqRDMyxPA8agW0Evw==
+e0SpkLHP2Qxj/vdC/jQ9DHFDPAayfCaLjvqU5LeJtJJqaz3E7LbmeXChuH62q47bPFG2I27nCpTq
+zCu1bRNxz6h5of7IpD+zga/tF5UgDxA7Ri/7kn/hUuGoVNHR8tAvRUY6sRh4P7rfhmSvIx2bmgh6
+vl7UJ14OeqDietLTa59fQzxdXdkN6Ic6+Oc9ziEEY7UeBV5rSm+XfyIjGvFAuJTpizzA1me6OWnX
+LJtfiX3T8bRU+cNZSAjUk8IoyLLyx8pK1OS0UOGtIjWx9Fmim97IM7QOZ74rAHCMKawo5VUHoPea
+EZ/b3VQfeeO96I6P0PrRmqUKb3TRGNh32WnEIg==
 </SignatureValue>
 <KeyInfo>
 <X509Data>

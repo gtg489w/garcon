@@ -132,7 +132,7 @@
 </Reference>
 <Reference URI="js/main.js">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>7EMJQcEZX/W/l/iCE1SD05KFdbFhiIHpm464qJsv1z8=</DigestValue>
+<DigestValue>new2JP0iozeGy6c8Sw3sOKoG00+J0002p3aJl4a/gx4=</DigestValue>
 </Reference>
 <Reference URI="js/query.ui.touch-punch.min.js">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -171,11 +171,11 @@
 </Reference>
 </SignedInfo>
 <SignatureValue>
-He82hrbP0UJC/I3+ydj7TaqIALxUj5xmla/YFSh3U6aDZhYC/2FNZJ7EwN6K0wbELcMSXhT5qJuE
-ktHsN1DRWhg7STLQNq1YN9GSTY38h889SXcApU/7yNiIetXMR7v3Gp2hkd6jbAi5oQvH5enp6pp/
-zT0dl+1kv8GYo/QNTJ/ZpUFcOs98un1mvr03h8DVH/yTBSLQZJmVCNBBq+30mkBPxKMAugcGa4JK
-oJDqOCgwu3Xzv35cfzkBNx1iYisv0GqBaA2fX+wpfymrfsFQTaCV1Q5zZ1evMAjDMNZO/DGWlAjX
-KZBUUMnyki27qj5hSIKMhS1p1I+x/t7HHytpZA==
+E/8bPxlPYJJCJwj4Y2UOv40R6E2vGCEKXOdFsyrtju+IBeyoyl+4TzT08pzikmfqRyDfK+twXQnG
+EbL+iC0LMvrss6vS4lXP3kwWE3yM7CS0UfmPCD9h4dRGmXPM12NpV3UYgXvhyOze09a9T2OG12hG
+Ga9d/SFee2Xjdh4WUKesjHbFbnssvYQkSlyJJosGCJfyep0ssSLTQNdIRfnSwu8SxiZm5SA/Go19
+28VidGK9gdbuG6azEf32dAZbh3bvJ99ic04NCLyRja/hMQBw9hSGRaYp7UJKcRVuR7Rd6FKW4NcJ
+mZ/mJae1k7R3kbyU4ogkWF9ptp2e3V+Fiq3GzQ==
 </SignatureValue>
 <KeyInfo>
 <X509Data>
