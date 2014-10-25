@@ -69,8 +69,29 @@ body {
 .btn-full {
 	width: 300px!important;
 }
-.card {
+.payment-card {
 	width: 200px;
 	height: 120px;
 	background: #fff;
+	position: absolute;
+}
+#card1 {
+	top: 40px;
+	left: -180px;
+	-ms-transform: rotate(-20deg);
+	-webkit-transform: rotate(-20deg);
+	transform: rotate(-20deg);
+	opacity: .4;
+}
+#card2 {
+	top: 0px;
+	left: 60px;
+}
+#card3 {
+	top: 40px;
+	left: 300px;
+	-ms-transform: rotate(20deg);
+	-webkit-transform: rotate(20deg);
+	transform: rotate(20deg);
+	opacity: .4
 }

@@ -8,7 +8,7 @@
 </Reference>
 <Reference URI="css/style.css">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>CBH5IQzGYwQ7kZLvX7YApDNgUHbyWv7Yiz2Wp8HBQqg=</DigestValue>
+<DigestValue>QNOU7xcYk1HlrOOw3oB2ifWDPBnjBY3eX68EKipSI1w=</DigestValue>
 </Reference>
 <Reference URI="icon.png">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -16,7 +16,7 @@
 </Reference>
 <Reference URI="index.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>I5dtR8wYJzLRIKzc7qumeRzSO3+pDdTwP2iwCP6YgDo=</DigestValue>
+<DigestValue>uoL1PEZSS1ISB1s3IdrB0tYudxQyFIMTBgs84bxdQsY=</DigestValue>
 </Reference>
 <Reference URI="js/jquery-1.9.1.js">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -120,7 +120,7 @@
 </Reference>
 <Reference URI="js/main.js">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>HjxO2M39G6/cACdc/Q0+ZXpSvxS2NSVnMIeziO/e7fk=</DigestValue>
+<DigestValue>0P71T6ryHer05prtrDZF51HCUwnP9vLYurVBKHZLpHI=</DigestValue>
 </Reference>
 <Reference URI="js/query.ui.touch-punch.min.js">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -139,11 +139,11 @@
 </Reference>
 </SignedInfo>
 <SignatureValue>
-PCpF3UE/j61Iez+zWkF+1CcG39Ke1GOUkLaYX7zskTGZVvaLntuWp3zLco96pvrOnxS2J4uoY8h4
-PghDNONyzWpR8HmdOuUU/4vAhvUNN8W7HkKq8xKVj081rzgmQFsTY3jKm2rMaa5/iTcNU8eE9XPA
-Eg9uBo2/RKs+8jvOAfgpNHghvZjo0c+/czaR4XRIRBd6XWKH/Xam8CBsOvwNnUBdymDjyzPbMh6e
-WJszq1jXb5chAKaJJV4oCTyFGxrmRuqI5zSqPUhY9IDmTuspWLLHyKkOmPeVQ7ahqM8ZDj2z+dmT
-oWRVTFbwEo8GNVnGET4FJuxAPXlgGHw4wEK6BQ==
+VxzJkrANTF4MKbXIsRpmUDpKd4RuLFyeExp74csKN5vsac3CItNFJfJxqtggUQ11G2SwJyPwu+jP
+OVWP4DDScDnBEIEtDI0RdhmqCSveuwHHaa5BddakWoNng0hubNGSFmQxLKfKzeYMflgsR9XlQKqb
+q6uxpIjuZ+zNYBNdWSdaIUOdhPfXMh/FkO/WwMF54hiSzhzsI7qbdoXnRiT007LF6tO5H++kQbks
+Ksw/VkSHkK8jl05Fg/qpB9bj1SgvQSfUP3eAGbAyA0dZTXBKDGq8c/PyQ2QtHemapuwSoGZRNbIi
+vY2KDx/hX6K2Ri63Vx43AMfLM1TOpy6Nq+fZEg==
 </SignatureValue>
 <KeyInfo>
 <X509Data>

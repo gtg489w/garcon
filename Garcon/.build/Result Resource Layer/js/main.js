@@ -97,14 +97,66 @@ $(window).load(function(){
 		$('#btn-tip-20').addClass('btn-selected');
 		addTip(.2);
 	});
+	$('#no-tip').click(function() {
+		slideToCardSelection();
+	});
 
 	var slideToCardSelection = function() {
 		$('#page-payment').animate({
 			top: '-122px'
 		});
+		setTimeout(function() {
+			$('#payment-card-line').fadeIn();
+		}, 400);
 		$('#no-tip').fadeOut();
 	};
 
+
+
+
+	$('.payment-card-right').click(function() {
+		var degree_right = 20;
+		var degree_center = 0;
+		var degree_left = -20;
+		rotate = setInterval(function() {
+			if(degree_right <= 0) {
+				window.clearInterval(rotate);
+			}
+			$('.payment-card-right').css({
+				'-webkit-transform': 'rotate(' + degree_right + 'deg)',
+			    '-moz-transform': 'rotate(' + degree_right + 'deg)',
+			    'transform': 'rotate(' + degree_right + 'deg)'
+			});
+			$('.payment-card-left').css({
+				'-webkit-transform': 'rotate(' + degree_left + 'deg)',
+			    '-moz-transform': 'rotate(' + degree_left + 'deg)',
+			    'transform': 'rotate(' + degree_left + 'deg)'
+			});
+			$('.payment-card-center').css({
+				'-webkit-transform': 'rotate(' + degree_center + 'deg)',
+			    '-moz-transform': 'rotate(' + degree_center + 'deg)',
+			    'transform': 'rotate(' + degree_center + 'deg)'
+			});
+
+			degree_right -= 1;
+			degree_center -= 1;
+			degree_left -= 1;
+		}, 15);
+		$('.payment-card-right').animate({
+			left: '60px',
+			top: '0px',
+			opacity: 1
+		});
+		$('.payment-card-left').animate({
+			left: '-220px',
+			top: '80px',
+		});
+		$('.payment-card-center').animate({
+			left: '-180px',
+			top: '80px',
+			opacity: .4
+		});
+	});
 
 
 });
