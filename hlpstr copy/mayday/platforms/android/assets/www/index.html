@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <title>Garcon Support</title>
+    </head>
+    <body>
+        <div style="width: 700px; height: 700px; background-image: url(logo.png); background-position: center center; background-repeat: no-repeat; background-size: contain; position: absolute; top: 100px; left: 200px;"></div>
+        <div style="position: absolute; top: 800px; text-align: center; width: 100%; color: #222;">You will be connected to a support representative momentarily...</div>
+        <div id="page_video" style="z-index: 99; background: Transparent">
+            <div id="myPublisherDiv"></div>
+        </div>
+        
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" charset="utf-8" src="opentok.js"></script>
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript">
+            app.initialize();
+        </script>
+    </body>
+</html>
