@@ -36,7 +36,7 @@
 </Reference>
 <Reference URI="author-signature.xml">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>dru++5h+mPBTKUEHi3TeVeFVCd2KXN1+jxtahMwCGh0=</DigestValue>
+<DigestValue>b8k6KhoxkD9voIps65OZ1Gs88PR0FrqppNbYfobvIo0=</DigestValue>
 </Reference>
 <Reference URI="card_mastercard.png">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -64,7 +64,7 @@
 </Reference>
 <Reference URI="index.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>aLqjCzKQt/j19esHU2TlGwNOID9Tj44dY32/KTPPc1I=</DigestValue>
+<DigestValue>hBa4/G0iGdyQnYQiMHO/PJKveJdqq94Shub68TY1P04=</DigestValue>
 </Reference>
 <Reference URI="js/jcarousel.js">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -172,7 +172,7 @@
 </Reference>
 <Reference URI="js/main.js">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>iK20LXHe4mcoTotWsPogpYKouu5/YJjJhH9AxUwEBHg=</DigestValue>
+<DigestValue>32dmcbTZeceI9FxfDNq2BapwD7iU7qfeBbp7lu9H66M=</DigestValue>
 </Reference>
 <Reference URI="js/query.ui.touch-punch.min.js">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -211,11 +211,11 @@
 </Reference>
 </SignedInfo>
 <SignatureValue>
-Os5gMtHfFAGCyjI7z6zjk9xIZamF6lIh1+ko/1sp+NZc5TAeTnzRqDEc4zMyD5Icpd+kXSXO/y7n
-0q3B1Ax6JufOFzjzIumv0rW7KETZ//SK8GgpsBNZLUcluFo2bWSSTpfjBP+D/Nty2bWzxpWe5dPz
-bWwDGkRU7tTeSYB9AW0uy8Az2LeYXu/49BaH25FQj7rez/4msv2Emg6FksrZHyjy9ZL8MN8992TB
-FdCl5cjwfE1uhTVnD5BMuZR1Xrxzhb8xoO2fYv4AjuUQrrKL8jDlhFz8R0SSM53stngCekVZ/QqG
-FbwwrsYfWVL02apcLkVKjpOyYePWBDjvh7i1FA==
+jnUW0bue6clkVcufvvGCqPIbV1w77WiO0IxB3EP7sYXCieDKTZEMwWvu1lLeEHQ5DSXtYoZchoXy
+wNidGcv4E/SLLd9Vd0OewE4oC+lANxfGrd2A5MU7FENWcPb3GhCSS2KS20OvgULZwl5lckDLLASf
+++8jODehAhU10oGtEltQdePOJ2REubVJ6PIa/hEtmdCSSb3kZ8goDZQoq5hbyktJEhcj4BtwXjl6
+9HKcmqx97No+/ra4Sx6NpxuPZRdZpeMNTwqrh+oRs8CCB2Rs+HnkyYfCVeFT16EcSWczG0UeehZz
+a0SYE5PrEefnQZooQLgRP8+0iJvw0aWb5eog0Q==
 </SignatureValue>
 <KeyInfo>
 <X509Data>

@@ -104,7 +104,7 @@ var getOrders = function() {
 		SASocket.setDataReceiveListener(function(channelId, data) {
 //			alert(data);
 			var j = JSON.parse(data);
-			if(j.id) {
+			if(j.id && j.totalAmount > 0) {
 				order = j;
 				acceptingPayment = true;
 				showPayment();
@@ -144,7 +144,7 @@ var postPayment = function() {
 		});
 		var amt = $('#payment-total-dollar').text() + $('#payment-total-cents').text();
 		amt = amt.replace('$','');
-		SASocket.sendData(CHANNELID, 'postPayment'+JSON.stringify({"orderId":1,"userId":1,"userCardId":paymentCardId,"amount":amt,"tipAmount":0.0}));
+		SASocket.sendData(CHANNELID, 'postPayment'+JSON.stringify({"orderId":order.id,"userId":1,"userCardId":paymentCardId,"amount":amt,"tipAmount":0.0}));
 	} catch(err) {
 		alert("exception [" + err.name + "] msg[" + err.message + "]");
 	}
