@@ -9,6 +9,8 @@
 
 		<script type="text/javascript" src="js/jquery-1.9.1.js"></script>
 		<script type="text/javascript" src="js/jquery-ui/jquery-ui.js"></script>
+		<script type="text/javascript" src="js/tau.js"></script>
+		<script type="text/javascript" src="js/testData.js"></script>
 		<script type="text/javascript" src="js/main.js"></script>
 		<link rel="stylesheet" href="css/style.css" />
 </head>
@@ -19,32 +21,38 @@
 
 
 
-	<div id="page-payment" class="page" style="display: block; position: relative;">
-		<div id="payment-tip">
-			<div class="center" style="padding-top: 12px;">Add A Tip</div>
-			<div id="btn-tip-10" class="btn">
-				<div>10%</div>
-				<div class="sub">$8.31</div>
+	<div id="page-payment" class="page">
+		<div id="payment-page-container" style="position: relative;">
+			<div id="payment-tip">
+				<div class="center" style="padding-top: 12px;">Add A Tip</div>
+				<div id="btn-tip-10" class="btn">
+					<div>10%</div>
+					<div class="sub">$8.31</div>
+				</div>
+				<div id="btn-tip-15" class="btn">
+					<div>15%</div>
+					<div class="sub">$8.31</div>
+				</div>
+				<div id="btn-tip-20" class="btn">
+					<div>20%</div>
+					<div class="sub">$8.31</div>
+				</div>
 			</div>
-			<div id="btn-tip-15" class="btn">
-				<div>15%</div>
-				<div class="sub">$8.31</div>
+			<div id="payment-total" style="padding-top: 20px;">
+				<span id="payment-total-dollar">$83</span><span id="payment-total-cents" class="sup">.16</span>
 			</div>
-			<div id="btn-tip-20" class="btn">
-				<div>20%</div>
-				<div class="sub">$8.31</div>
+			<div id="no-tip" style="margin-top: 30px;" class="center">No Tip</div>
+			<div id="payment-card-line" style="margin-top: 30px; position: relative; height: 200px; width: 100%; overflow: scroll;">
+				<div id="payment-cards" style="width: 800px; padding-left: 20px; padding-right: 20px; height: 200px;"></div>
 			</div>
-		</div>
-		<div id="payment-total" style="padding-top: 20px;">
-			<span id="payment-total-dollar">$83</span><span id="payment-total-cents" class="sup">.16</span>
-		</div>
-		<div id="no-tip" style="margin-top: 30px;" class="center">No Tip</div>
-		<div id="payment-card-line" style="margin-top: 30px; position: relative; display: none;">
-			<div id="card1" class="payment-card payment-card-left"></div>
-			<div id="card2" class="payment-card payment-card-center"></div>
-			<div id="card3" class="payment-card payment-card-right"></div>
+			<div id="payment-processing-line">
+				<div><img src="loading.gif" alt="" />
+				<div>Processing<br />Payment</div>
+			</div>
 		</div>
 	</div>
+
+
 
 
 

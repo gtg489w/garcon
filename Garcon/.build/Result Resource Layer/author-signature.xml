@@ -2,13 +2,21 @@
 <SignedInfo>
 <CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"></CanonicalizationMethod>
 <SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"></SignatureMethod>
+<Reference URI="card_mastercard.png">
+<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
+<DigestValue>txL69COvtN9I5sCYi7g5yYVeJaCRUUdYG2cB5wNtBCY=</DigestValue>
+</Reference>
+<Reference URI="card_visa.png">
+<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
+<DigestValue>m/BcI5rpfUPFHK2seGWS6dR47S8eoa+MRfMHWNEaH+Y=</DigestValue>
+</Reference>
 <Reference URI="config.xml">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>AnmSXXDa+S5d/7WNRTue4Q7BC8lkP/7+98us5nFtNBI=</DigestValue>
+<DigestValue>SaWBEfvXG490O7HExLP2pzQLDZ+y+gC9L4rnPzwoDJg=</DigestValue>
 </Reference>
 <Reference URI="css/style.css">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>QNOU7xcYk1HlrOOw3oB2ifWDPBnjBY3eX68EKipSI1w=</DigestValue>
+<DigestValue>IXzYZcnxuHG6dK/csNaMlvlkAetvazeOQtHVhH7izmY=</DigestValue>
 </Reference>
 <Reference URI="icon.png">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -16,7 +24,11 @@
 </Reference>
 <Reference URI="index.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>uoL1PEZSS1ISB1s3IdrB0tYudxQyFIMTBgs84bxdQsY=</DigestValue>
+<DigestValue>8rmiB0Yrvnzp/tWQs1sXAoiLIRocOKqijiPxrDnfsYE=</DigestValue>
+</Reference>
+<Reference URI="js/jcarousel.js">
+<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
+<DigestValue>2LpuAOefXU/8Xj9jQSPDaCNkjmAcXWRl0nxl53l9KAc=</DigestValue>
 </Reference>
 <Reference URI="js/jquery-1.9.1.js">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -120,15 +132,31 @@
 </Reference>
 <Reference URI="js/main.js">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>0P71T6ryHer05prtrDZF51HCUwnP9vLYurVBKHZLpHI=</DigestValue>
+<DigestValue>VoD42KEkFVZHWSTm6jHLGyaEUodnb5cPfOSEpNVvHNk=</DigestValue>
 </Reference>
 <Reference URI="js/query.ui.touch-punch.min.js">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
 <DigestValue>AAhU14J4Gv8bFupUUcHaPQfvrdNauRHMt+S4UVcaJb0=</DigestValue>
 </Reference>
+<Reference URI="js/tau.js">
+<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
+<DigestValue>O9QyHOIDuj1ekbuDsHyoieydIyEid/Uh1tS8bYygpis=</DigestValue>
+</Reference>
+<Reference URI="js/testData.js">
+<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
+<DigestValue>I0bQ+LjJyF79Coac8s+0jUxZ1R9o3ovBZn8rHd2o9X0=</DigestValue>
+</Reference>
+<Reference URI="loading.gif">
+<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
+<DigestValue>FzdNv5M4YYHlJEVhuVqM0zd2JgxwKbHGIXbHa49+HBc=</DigestValue>
+</Reference>
 <Reference URI="payscreen.png">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
 <DigestValue>/yI0GgY2W6+vrLqk8fNeWGUiOr1XD0je9hvWDEPtFKw=</DigestValue>
+</Reference>
+<Reference URI="res/xml/accessoryservices.xml">
+<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
+<DigestValue>zIETi3j+J5wFGGIJs39v4n8GxCm0vl6mtZh5JWahI6c=</DigestValue>
 </Reference>
 <Reference URI="#prop">
 <Transforms>
@@ -139,11 +167,11 @@
 </Reference>
 </SignedInfo>
 <SignatureValue>
-VxzJkrANTF4MKbXIsRpmUDpKd4RuLFyeExp74csKN5vsac3CItNFJfJxqtggUQ11G2SwJyPwu+jP
-OVWP4DDScDnBEIEtDI0RdhmqCSveuwHHaa5BddakWoNng0hubNGSFmQxLKfKzeYMflgsR9XlQKqb
-q6uxpIjuZ+zNYBNdWSdaIUOdhPfXMh/FkO/WwMF54hiSzhzsI7qbdoXnRiT007LF6tO5H++kQbks
-Ksw/VkSHkK8jl05Fg/qpB9bj1SgvQSfUP3eAGbAyA0dZTXBKDGq8c/PyQ2QtHemapuwSoGZRNbIi
-vY2KDx/hX6K2Ri63Vx43AMfLM1TOpy6Nq+fZEg==
+DF3NkXS1YOMeNINP7tA00ENLSbiMgjFy+SFKiPdZ5MVL1RixoCMqMM0q1+SkRM1YrEe8GFVsOMpo
+39SPl0eTjoH3iTPp4mIe5LlMKSuA+q0AlG2JF5bBXIHGQWt45+WnNVwghw0kyQKzS38wp/+Rsvf6
+Jux9CfGokhr4Jr5xz4c6a704Mk2eh/KukFDWAduWhNake8ebWRu38tZrsuMb24n894WPl5/yc35e
+f4Vw3pWw3jtXI2utQcvvkGcEV4m3Iq+QprojuZySYw9eLPgU31dC8UYDBfiVJyDBbYFriWHDikN6
+9eMuFpqRStsp/R5wGf7GtzC5tA2tSjJKIf6piA==
 </SignatureValue>
 <KeyInfo>
 <X509Data>

@@ -1,0 +1,1 @@
+var data_cards = [{"id":1,"userId":1,"cardType":"VISA","description":"Debit Card","fakeDigits":"1234567890123456","fakeCVV2":"987"},{"id":2,"userId":1,"cardType":"MASTER","description":"Cash Back","fakeDigits":"123456789012345","fakeCVV2":"9876"},{"id":3,"userId":1,"cardType":"VISA","description":"Sky Miles","fakeDigits":"1234567890123456","fakeCVV2":"987"}];

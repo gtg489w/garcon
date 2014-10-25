@@ -16,6 +16,7 @@ body {
 	-webkit-box-sizing: border-box;
 	height:320px;
 	color: #fff;
+	overflow: hidden;
 }
 .btn {
 	border: 2px solid #fff;
@@ -72,26 +73,30 @@ body {
 .payment-card {
 	width: 200px;
 	height: 120px;
-	background: #fff;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center center;
+	margin: 8px 20px;
+	float: left;
+	position: relative;
+}
+.card-title {
+	color: #990000;
+	font-size: 16px;
 	position: absolute;
+	text-align: center;
+	top: 20px;
+	width: 100%;
 }
-#card1 {
-	top: 40px;
-	left: -180px;
-	-ms-transform: rotate(-20deg);
-	-webkit-transform: rotate(-20deg);
-	transform: rotate(-20deg);
-	opacity: .4;
+#payment-processing-line {
+	display: none;
+	text-align: center;
+	font-size: 18px;
+	padding-top: 180px;
 }
-#card2 {
-	top: 0px;
-	left: 60px;
-}
-#card3 {
-	top: 40px;
-	left: 300px;
-	-ms-transform: rotate(20deg);
-	-webkit-transform: rotate(20deg);
-	transform: rotate(20deg);
-	opacity: .4
-}
+
+
+
+
+
+
