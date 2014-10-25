@@ -24,7 +24,7 @@
 </Reference>
 <Reference URI="index.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>8rmiB0Yrvnzp/tWQs1sXAoiLIRocOKqijiPxrDnfsYE=</DigestValue>
+<DigestValue>s+TSCu6D6Fk/V0BaYsfC6uC0LYlJVT1av70OfYIyySA=</DigestValue>
 </Reference>
 <Reference URI="js/jcarousel.js">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -132,7 +132,7 @@
 </Reference>
 <Reference URI="js/main.js">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>JCshiUdtArwGVXzXGs1OkgpIKtFbjKSgpz/wt8TedJE=</DigestValue>
+<DigestValue>7EMJQcEZX/W/l/iCE1SD05KFdbFhiIHpm464qJsv1z8=</DigestValue>
 </Reference>
 <Reference URI="js/query.ui.touch-punch.min.js">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -149,6 +149,10 @@
 <Reference URI="loading.gif">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
 <DigestValue>FzdNv5M4YYHlJEVhuVqM0zd2JgxwKbHGIXbHa49+HBc=</DigestValue>
+</Reference>
+<Reference URI="logo.png">
+<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
+<DigestValue>Qj2AZzAv+LrAkYu9O/1hhBJIjc+w/X/KNKY3f9SVgBk=</DigestValue>
 </Reference>
 <Reference URI="payscreen.png">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -167,11 +171,11 @@
 </Reference>
 </SignedInfo>
 <SignatureValue>
-UYI94RgeeZSfIgUBnXUnorLgtnIOfyA811kfQJY8++qf7LHrFo9ma3FyXBhfgzqlIpNhXHkZbg0f
-LZv8lXlduCHlkYC69al1lCBoib8lON8yPknUXjy0BRHXlCgtopAZfrqG/cckSvUr+kXsq+4HScrM
-kvsy4o8CcWGu/8KamgryX/4TGVPecUwpySTqSqca0Pck4qSQXfWszavz+Vw2dePrMnaRGgpeHxM3
-s5WHWsy9AF3pl/gaJ6p9gGhIokn87grN5wPGPKRPyEGYyjq6ywBXdtdSgQ0qbTvqjyKQUG13gM10
-/+4kmq+3P+oo9XSnMoHMnwGBnt7swhs1CSzDkQ==
+He82hrbP0UJC/I3+ydj7TaqIALxUj5xmla/YFSh3U6aDZhYC/2FNZJ7EwN6K0wbELcMSXhT5qJuE
+ktHsN1DRWhg7STLQNq1YN9GSTY38h889SXcApU/7yNiIetXMR7v3Gp2hkd6jbAi5oQvH5enp6pp/
+zT0dl+1kv8GYo/QNTJ/ZpUFcOs98un1mvr03h8DVH/yTBSLQZJmVCNBBq+30mkBPxKMAugcGa4JK
+oJDqOCgwu3Xzv35cfzkBNx1iYisv0GqBaA2fX+wpfymrfsFQTaCV1Q5zZ1evMAjDMNZO/DGWlAjX
+KZBUUMnyki27qj5hSIKMhS1p1I+x/t7HHytpZA==
 </SignatureValue>
 <KeyInfo>
 <X509Data>

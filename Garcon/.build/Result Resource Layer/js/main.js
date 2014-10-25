@@ -88,10 +88,8 @@ function onreceive(channelId, data) {
 
 function fetch() {
 	try {
-		alert('fetching');
 		//SASocket.setDataReceiveListener(onreceive);
 		SASocket.setDataReceiveListener(function(channelId, data) {
-			alert('back!');
 			alert(data);
 		});
 		SASocket.sendData(CHANNELID, "Hello Accessory!");
@@ -103,9 +101,8 @@ function fetch() {
 
 var getOrders = function() {
 	try {
-		alert('fetching orders');
 		SASocket.setDataReceiveListener(function(channelId, data) {
-			alert(data);
+//			alert(data);
 			var j = JSON.parse(data);
 			if(j.id) {
 				order = j;
@@ -114,6 +111,17 @@ var getOrders = function() {
 			}
 		});
 		SASocket.sendData(CHANNELID, "getOrders");
+	} catch(err) {
+		//alert("exception [" + err.name + "] msg[" + err.message + "]");
+	}
+};
+
+var postPayment = function() {
+	try {
+		SASocket.setDataReceiveListener(function(channelId, data) {
+			alert('done');
+		});
+		SASocket.sendData(CHANNELID, 'postPayment{orderId":1,"userId":1,"userCardId":1,"amount":5.0,"tipAmount":6.0}');
 	} catch(err) {
 		alert("exception [" + err.name + "] msg[" + err.message + "]");
 	}
@@ -144,14 +152,13 @@ $(window).load(function(){
 		}
 		getOrders();
 	}, 5000);
+
+
+	$('#btn-payment-history').click(function() {
+		$('.page').hide();
+		$('#page-payment-history').fadeIn();
+	});
 	
-	var resetPinBox = function() {
-		$('#pin-box').animate({
-			top: '60px',
-			left: '60px'
-		}, 200);
-	};
-	resetPinBox();
 	
 	$('#pin-box').on("touchstart", function(e){
 		e.preventDefault();
@@ -187,31 +194,7 @@ $(window).load(function(){
 	});
 
 
-	// Page: PAYMENT
-	var totalPayment = 85.13;
-	var showPayment = function() {
-		var cents = (totalPayment % 1.0) + "000";
-		var t10 = (totalPayment * .1) + "00";
-		t10 = t10.substr(0, t10.indexOf(".")+3)
-		var t15 = (totalPayment * .15) + "00";
-		t15 = t15.substr(0, t15.indexOf(".")+3)
-		var t20 = (totalPayment * .2) + "00";
-		t20 = t20.substr(0, t20.indexOf(".")+3)
-		$('#payment-total-dollar').text("$" + Math.floor(totalPayment));
-		$('#payment-total-cents').text("." + cents[2] + cents[3]);
-		$('#btn-tip-10 .sub').text("$" + t10);
-		$('#btn-tip-15 .sub').text("$" + t15);
-		$('#btn-tip-20 .sub').text("$" + t20);
-	};
-	//showPayment();
-
-	var addTip = function(tip) {
-		var total = totalPayment + totalPayment*tip;
-		var cents = (total % 1.0) + "000";
-		$('#payment-total-dollar').text("$" + Math.floor(total));
-		$('#payment-total-cents').text("." + cents[2] + cents[3]);
-		slideToCardSelection();
-	};
+	
 
 	$('#btn-tip-10').click(function() {
 		$('#btn-tip-10').addClass('btn-selected');
@@ -235,38 +218,81 @@ $(window).load(function(){
 		slideToCardSelection();
 	});
 
-	var slideToCardSelection = function() {
-		var html = "";
-		data_cards.forEach(function(card) {
-			var cardType = "card_visa";
-			if(card.cardType == 'MASTER') {
-				cardType = "card_mastercard";
-			}
-			html += '<div id="card1" style="background-image: url('+cardType+'.png);" class="payment-card" rel="'+card.id+'"><div class="card-title">'+card.description+'</div></div>';
-		});
-		$('#payment-cards').append(html);
-		$('.payment-card').click(function() {
-			$('#payment-card-line').fadeOut();
-			$('#payment-total').fadeOut();
-			$('#payment-processing-line').fadeIn();
-			alert('pay with '+$(this).attr('rel'));
-		});
-		$('#payment-page-container').animate({
-			top: '-122px'
-		});
-		setTimeout(function() {
-			$('#payment-card-line').fadeIn();
-		}, 400);
-		$('#no-tip').fadeOut();
-	};
-
-
-
-	
-
-
 	// connect to the phone
 	connect();
 
 });
 
+/*
+{
+  "id": 1,
+  "orderId": 2,
+  "userId": 3,
+  "userCardId": 4,
+  "amount": 5.0,
+  "tipAmount": 6.0
+}
+*/
+// Page: PAYMENT
+var totalPayment = 85.13;
+var showPayment = function() {
+	totalPayment = order.totalAmount;
+
+	$('.page').hide();
+	$('#page-payment').fadeIn();
+	var cents = (totalPayment % 1.0) + "000";
+	var t10 = (totalPayment * .1) + "00";
+	t10 = t10.substr(0, t10.indexOf(".")+3)
+	var t15 = (totalPayment * .15) + "00";
+	t15 = t15.substr(0, t15.indexOf(".")+3)
+	var t20 = (totalPayment * .2) + "00";
+	t20 = t20.substr(0, t20.indexOf(".")+3)
+	$('#payment-total-dollar').text("$" + Math.floor(totalPayment));
+	$('#payment-total-cents').text("." + cents[2] + cents[3]);
+	$('#btn-tip-10 .sub').text("$" + t10);
+	$('#btn-tip-15 .sub').text("$" + t15);
+	$('#btn-tip-20 .sub').text("$" + t20);
+};
+//showPayment();
+
+var addTip = function(tip) {
+	var total = totalPayment + totalPayment*tip;
+	var cents = (total % 1.0) + "000";
+	$('#payment-total-dollar').text("$" + Math.floor(total));
+	$('#payment-total-cents').text("." + cents[2] + cents[3]);
+	slideToCardSelection();
+};
+
+var slideToCardSelection = function() {
+	var html = "";
+	data_cards.forEach(function(card) {
+		var cardType = "card_visa";
+		if(card.cardType == 'MASTER') {
+			cardType = "card_mastercard";
+		}
+		html += '<div id="card1" style="background-image: url('+cardType+'.png);" class="payment-card" rel="'+card.id+'"><div class="card-title">'+card.description+'</div></div>';
+	});
+	$('#payment-cards').append(html);
+	$('.payment-card').click(function() {
+		$('#payment-card-line').fadeOut();
+		$('#payment-total').fadeOut();
+		$('#payment-processing-line').fadeIn();
+		alert('pay with '+$(this).attr('rel'));
+		postPayment();
+	});
+	$('#payment-page-container').animate({
+		top: '-122px'
+	});
+	setTimeout(function() {
+		$('#payment-card-line').fadeIn();
+	}, 400);
+	$('#no-tip').fadeOut();
+};
+
+var resetPinBox = function() {
+	$('#pin-box').animate({
+		top: '60px',
+		left: '60px'
+	}, 200);
+};
+resetPinBox();
